@@ -1,9 +1,46 @@
 # 📊 Sales-and-Customer-Insights Analysis
 
-This repository presents a comprehensive analysis of sales performance, customer behavior, and product trends across multiple categories, regions and countries. The insights are drawn from a finalized dataset covering six months of operations, and are intended to guide strategic decisions in procurement, marketing, and inventory planning.
+This repository presents a comprehensive analysis of sales performance, customer behavior, and product trends across multiple categories, regions and countries. 
+## Dataset descriptions
+| Dataset       | Fields                                           |
+|---------------|--------------------------------------------------|
+| Sales         | Transactions;Revenue;Date;Discount;Region        |
+| Products      | Products;Categories;Subcaetgories;Supplier       |
+| Customer      | Demographics;Loyalty Status;Country;Revenue      |
 
+
+The insights are drawn from a finalized dataset covering six months of operations, and are intended to guide strategic decisions in procurement, marketing, and inventory planning.
+
+The objective is to create an interactive Sales & Customer Performance Dashboard in Power BI that answers:
+
+* Which products generate the most revenue?
+* Who are our top customers by sales and loyalty status?
+* How do sales trends vary across regions and over time?
+* Which product categories contribute the most to business growth?
 ---
 
+## Methodology
+
+### 1. Data Cleaning (Power Query)
+### 2. Feature Engineering (Power Query)
+- **Discount Amount**=Discount/100*Raw Revenue
+- **Net Revenue**=Raw Revenue-Discout Amount
+### 3. Data Analysis (Power BI)
+- **Relationship Modelling**
+     - Sales<->Products(ProductID)
+     - Sales<->Customers(CustomerID)
+
+- **Calculated Measures(DAX)**
+     - Total Revenue
+     - Total Quantity
+     - Top Customer
+     - Avg Customer
+     - Avg Discount
+
+### 3. Visualization (Power BI)
+   - Dashboard( Revenue)
+   - Dashboard (Products)
+   - Dashboard (Customers)
 ## 🧾 Summary
 
 - **Total Revenue:** $106.44K  
@@ -35,7 +72,7 @@ This repository presents a comprehensive analysis of sales performance, customer
 
 - **Peak Revenue Months:** April($35k) and June($21K)  
 - **Quantity Sold Monthly:** Highest in April (53 units), followed by May (42 units)  
-- **Revenue by Month:** Stedy rise from March and a dip in May by 66% against June.
+- **Revenue by Month:** Stedy rise from March and a dip in May by 65.7% against June.
 
 ---
 
@@ -81,6 +118,40 @@ This repository presents a comprehensive analysis of sales performance, customer
 
 
 ---
+
+
+## Recommendations
+
+### 1. Prioritize High-Performing Categories
+- Focus on furniture and electronics, especially laptops and tables.
+- Strengthen supplier relationships and ensure stock availability for fast-moving items.
+
+### 2. Address Revenue Decline
+- Investigate causes of the 65.7% drop from June to May.
+- Launch mid-year campaigns and loyalty incentives to boost Q3 performance.
+
+### 3. Optimize Regional Strategy
+- Tailor promotions and inventory to top-performing regions: North, East, and West.
+- Consider localized marketing and regional bundles.
+
+### 4. Refine Customer Targeting
+- Explore why female engagement is low and adjust product mix or messaging.
+- Identify and reward high-value customers with exclusive perks.
+
+### 5. Enhance Loyalty Program
+- Encourage progression from Bronze to Silver and Gold tiers.
+- Offer tiered benefits such as discounts, free shipping, and priority access.
+
+### 6. Improve Inventory Planning
+- Use subcategory trends to guide reorder points and safety stock levels.
+- Implement automated alerts for fast-moving items.
+
+### 7. Reassess Discount Strategy
+- Evaluate the impact of $280 average discounts on margins.
+- Shift toward value-added promotions like bundles or loyalty rewards.
+
+---
+
 
 ## Explore Dashboard
 https://app.powerbi.com/view?r=eyJrIjoiY2E4ZjQ2MmYtNzU2MS00ZDZlLWI2YTMtNjFhNmVlNzEyZDcwIiwidCI6IjFlNTZjNTMwLWI0NzUtNGY5OC1hN2E4LWQwYWVhODc4OTJhMSJ9
